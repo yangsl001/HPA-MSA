@@ -83,8 +83,6 @@ The entire workflow is driven by a main training script `train.py` and YAML conf
 
 To run an experiment, you simply need to specify the path to the desired configuration file using the `--config` argument.
 
-#### 1. Baseline Training
-
 To train the full HPA-MSA model on the CMU-MOSI dataset using the default settings, run:
 
 ```bash
@@ -109,18 +107,6 @@ The script will:
 - The model with the best performance on the validation set (based on F1-score) will be saved to the `checkpoints/` directory.
 - After training is complete, it will load the best model and perform a final evaluation on the test set.
 
-#### 2. Running Ablation Studies
-
-To run an ablation study, simply use a different configuration file that modifies the parameters of the baseline. For example, to train a model without the orthogonality loss (`L_ortho`):
-
-```bash
-python train.py --config configs/hpa_msa_ablation_no_ortho.yaml
-```
-
-### Configuration Files (`.yaml`)
-
-All hyperparameters and settings for an experiment are controlled via YAML files in the `configs/` directory. This allows for easy and reproducible experimentation without changing the source code.
-
 
 ## Citation
 
@@ -133,4 +119,5 @@ If you find this work useful in your research, please consider citing our paper:
   booktitle={Submission},
   year={2024}
 }
+
 ```
