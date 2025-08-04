@@ -1,0 +1,10 @@
+torch
+transformers
+numpy
+scikit-learn
+pandas
+tqdm
+PyYAML
+easydict
+matplotlib
+# Add other specific versions if needed, e.g., torch==1.13.1
